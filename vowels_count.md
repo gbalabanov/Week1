@@ -1,4 +1,4 @@
-# Hello World program in Python
+
 def count_vowels(string1):
     counter=0
     string=str(string1).lower()
