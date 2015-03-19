@@ -5,7 +5,8 @@ def print_matrix(a,b):
         for j in range(b):
             temp=int(input("Enter number: "))
             matrix[i][j]=temp
-    print(matrix)
+    for x in range(0,len(matrix)):
+        print(matrix[x])
     return matrix
 
 def sum_matrix(mtx):
