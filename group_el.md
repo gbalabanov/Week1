@@ -3,8 +3,9 @@ def group(cons):
     tempList=[]
     consList=cons.split(",")
     counter=1
+    if len(cons)%2==0:
+        consList.pop()
     for x in range(0,len(consList)-1):
-        print (x)
         if consList[x] == consList[x+1]:
             tempList.append(consList[x+1])
             isAlone=False
