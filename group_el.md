@@ -13,18 +13,12 @@ def group(cons):
         else:
             tempList.append(consList[x])
             isAlone=True
-        if x==len(consList)-1:
-            if isAlone==False:
-                if consList[len(consList)-2] == consList[len(consList)-1]:
-                    tempList.append(consList[len(consList)-1])
-                else:
-                    tempList=[]
-                    tempList.append(consList[len(consList)-1])
-            else:
-                tempList=[]
-                tempList.append(consList[len(consList)-1])
         output.append(tempList)
         tempList=[]
+    if consList[len(consList)-1] == consList[len(consList)-2]:
+        output[len(output)-1].append(consList[len(consList)-1])
+    else:
+        output.append([consList[len(consList)-1]])
        
     return output
     
